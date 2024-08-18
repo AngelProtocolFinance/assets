@@ -1,5 +1,5 @@
 import { type Token } from "./types";
-import existing_chains from "../dist/chains.json";
+import existing_chains from "../chains.json";
 import {
   process_tokens,
   to_processed,
@@ -38,8 +38,8 @@ for (const token of all_filtered_tokens) {
 console.log({ new_chains });
 
 /// generate tokens list ///
-const id1 = process_tokens(filtered_tokens, "./dist/tokens/prod.json");
-const id2 = process_tokens(filtered_test_tokens, "./dist/tokens/test.json");
+const id1 = process_tokens(filtered_tokens, "./tokens/prod.json");
+const id2 = process_tokens(filtered_test_tokens, "./tokens/test.json");
 
 /// generate tokens map ///
 const tokens_map = all_filtered_tokens.reduce((prev, curr) => {
@@ -47,7 +47,7 @@ const tokens_map = all_filtered_tokens.reduce((prev, curr) => {
   return prev;
 }, {} as any);
 
-const id3 = write_json(tokens_map, "./dist/tokens/map.json");
+const id3 = write_json(tokens_map, "./tokens/map.json");
 
 // also write hashes to monitor change
-write_json([id1, id2, id3], "./dist/tokens/hash.json");
+write_json([id1, id2, id3], "./tokens/hash.json");

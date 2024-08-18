@@ -1,12 +1,12 @@
 {
   "name": "@better-giving/assets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "generate-tokens": "rm ./dist/tokens/* && bun run ./scripts/build.ts"
+    "generate-tokens": "rm ./tokens/* && bun run ./scripts/build.ts"
   },
   "devDependencies": {
     "@types/bun": "1.1.6",
