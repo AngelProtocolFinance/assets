@@ -99,3 +99,11 @@ export interface ProcessedToken {
   /** coingecko id */
   cg_id: string;
 }
+
+
+export interface ChainInfo {
+  /**@example "Polygon" */
+  name: string;
+  /**@example "#000" */
+  color: string;
+}

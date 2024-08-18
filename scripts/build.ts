@@ -43,7 +43,7 @@ const id2 = process_tokens(filtered_test_tokens, "./dist/tokens/test.json");
 
 /// generate tokens map ///
 const tokens_map = all_filtered_tokens.reduce((prev, curr) => {
-  prev[curr.id] = to_processed(curr);
+  prev[curr.code] = to_processed(curr);
   return prev;
 }, {} as any);
 
