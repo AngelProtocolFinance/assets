@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "generate-tokens": "rm ./dist/tokens/tokens_* && bun run ./scripts/build.ts"
+    "generate-tokens": "rm ./dist/tokens/* && bun run ./scripts/build.ts"
   },
   "devDependencies": {
     "@types/bun": "1.1.6",

@@ -4,7 +4,7 @@ import {
   process_tokens,
   to_processed,
   token_filter,
-  write_token_json,
+  write_json,
 } from "./helpers";
 
 const base_url = process.env.api_base_url;
@@ -38,8 +38,8 @@ for (const token of all_filtered_tokens) {
 console.log({ new_chains });
 
 /// generate tokens list ///
-process_tokens(filtered_tokens, "tokens");
-process_tokens(filtered_test_tokens, "tokens_test");
+const id1 = process_tokens(filtered_tokens, "./dist/tokens/prod.json");
+const id2 = process_tokens(filtered_test_tokens, "./dist/tokens/test.json");
 
 /// generate tokens map ///
 const tokens_map = all_filtered_tokens.reduce((prev, curr) => {
@@ -47,4 +47,7 @@ const tokens_map = all_filtered_tokens.reduce((prev, curr) => {
   return prev;
 }, {} as any);
 
-write_token_json(tokens_map, "tokens_map");
+const id3 = write_json(tokens_map, "./dist/tokens/map.json");
+
+// also write hashes to monitor change
+write_json([id1, id2, id3], "./dist/tokens/hash.json");
