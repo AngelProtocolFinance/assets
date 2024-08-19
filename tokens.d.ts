@@ -1,15 +1,15 @@
 declare module "@better-giving/assets/tokens/map.json" {
   const map: {
-    [token_symbol: string]: import("./types.ts").ProcessedToken;
+    [token_symbol: string]: import("./types.ts").Token;
   };
   export default map;
 }
 declare module "@better-giving/assets/tokens/prod.json" {
-  const tokens: import("./types.ts").ProcessedToken[];
+  const tokens: import("./types.ts").Token[];
   export default tokens;
 }
 declare module "@better-giving/assets/tokens/test.json" {
-  const tokens: import("./types.ts").ProcessedToken[];
+  const tokens: import("./types.ts").Token[];
   export default tokens;
 }
 
