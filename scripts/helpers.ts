@@ -2,6 +2,7 @@ import fs from "fs";
 import crypto from "crypto";
 import type { Ensure, RawToken, Token } from "../types";
 import chains from "../chains.json";
+import symbols from "../symbols.json";
 
 type Filtered = Ensure<RawToken, "network">;
 
@@ -23,6 +24,7 @@ export const to_processed = (t: Filtered): Token => {
     id: t.id.toString(),
     code: t.code,
     name: t.name,
+    symbol: (symbols as any)[t.code],
     precision: t.precision,
     logo: t.logo_url,
     network: t.network,

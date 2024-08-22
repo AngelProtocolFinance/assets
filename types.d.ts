@@ -98,6 +98,7 @@ export interface Token {
   id: string;
   /** @example "BTC" */
   code: string;
+  symbol: string;
   name: string;
   precision: number;
   /** @example "/images/coins/logo.png" */

@@ -1,5 +1,6 @@
 import { type RawToken } from "../types";
 import existing_chains from "../chains.json";
+import existing_symbols from "../symbols.json";
 import {
   process_tokens,
   to_processed,
@@ -29,8 +30,11 @@ const all_filtered_tokens = filtered_test_tokens.concat(filtered_tokens);
 
 /// CHECK FOR NEW CHAINS ///
 const new_chains: string[] = [];
+const new_symbols: string[] = [];
 for (const token of all_filtered_tokens) {
-  if (!token.network) continue;
+  if (!(existing_symbols as any)[token.code]) {
+    new_symbols.push(token.code);
+  }
 
   if (!(existing_chains as any)[token.network]) {
     new_chains.push(token.network);
@@ -40,6 +44,10 @@ for (const token of all_filtered_tokens) {
 if (new_chains.length > 0) {
   console.log({ new_chains });
   throw "New chains found. addt them before proceeding";
+}
+if (new_symbols.length > 0) {
+  console.log({ new_symbols });
+  throw "New tokens found. add them before proceeding";
 }
 
 /// generate tokens list ///
