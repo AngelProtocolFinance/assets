@@ -72,7 +72,7 @@
   "epic": { "name": "Epic Cash", "color": "#111418" },
   "avaxc": { "name": "Avalanche C-Chain", "color": "#e84141" },
   "cchain": { "name": "Avalanche C-Chain", "color": "#e84141" },
-  "xchain": { "name": "Avalanche C-Chain", "color": "#e84141" },
+  "xchain": { "name": "Avalanche X-Chain", "color": "#e84141" },
   "lna": { "name": "Linea", "color": "#000000" },
   "ftn": { "name": "Fastex", "color": "#a60163" },
   "kas": { "name": "Kaspa", "color": "#70c9bb" },

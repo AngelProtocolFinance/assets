@@ -1,29 +1,29 @@
 {
   "name": "@better-giving/assets",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
     "generate-tokens": "bun run ./src/scripts/generate-tokens.ts",
-    "build": "tsup"
+    "build": "bun generate-tokens && tsup"
   },
   "exports": {
     "./tokens": {
-      "default": "./dist/tokens/list.js",
+      "import": "./dist/tokens/list.js",
       "types": "./dist/tokens/list.d.ts"
     },
     "./tokens/test": {
-      "default": "./dist/tokens/list-test.js",
+      "import": "./dist/tokens/list-test.js",
       "types": "./dist/tokens/list-test.d.ts"
     },
     "./tokens/map": {
-      "default": "./dist/tokens/map.js",
+      "import": "./dist/tokens/map.js",
       "types": "./dist/tokens/map.d.ts"
     },
     "./chains": {
-      "default": "./dist/chains.js",
+      "import": "./dist/chains.js",
       "types": "./dist/chains.d.ts"
     }
   },
