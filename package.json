@@ -10,22 +10,10 @@
     "build": "bun generate-tokens && tsup"
   },
   "exports": {
-    "./tokens": {
-      "import": "./dist/tokens/list.js",
-      "types": "./dist/tokens/list.d.ts"
-    },
-    "./tokens/test": {
-      "import": "./dist/tokens/list-test.js",
-      "types": "./dist/tokens/list-test.d.ts"
-    },
-    "./tokens/map": {
-      "import": "./dist/tokens/map.js",
-      "types": "./dist/tokens/map.d.ts"
-    },
-    "./chains": {
-      "import": "./dist/chains.js",
-      "types": "./dist/chains.d.ts"
-    }
+    "./tokens": "./dist/tokens/list.js",
+    "./tokens/test": "./dist/tokens/list-test.js",
+    "./tokens/map": "./dist/tokens/map.js",
+    "./chains": "./dist/chains.js"
   },
   "devDependencies": {
     "@types/bun": "1.1.6",
