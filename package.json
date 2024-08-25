@@ -1,6 +1,6 @@
 {
   "name": "@better-giving/assets",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
   "keywords": [],
   "author": "",
@@ -10,10 +10,10 @@
     "build": "bun generate-tokens && tsup"
   },
   "exports": {
-    "./tokens": "./dist/tokens/list.js",
-    "./tokens/test": "./dist/tokens/list-test.js",
-    "./tokens/map": "./dist/tokens/map.js",
-    "./chains": "./dist/chains.js"
+    "./tokens": "./dist/tokens/list.mjs",
+    "./tokens/test": "./dist/tokens/list-test.mjs",
+    "./tokens/map": "./dist/tokens/map.mjs",
+    "./chains": "./dist/chains.mjs"
   },
   "devDependencies": {
     "@types/bun": "1.1.6",
