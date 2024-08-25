@@ -19,5 +19,9 @@
     "@types/bun": "1.1.6",
     "tsup": "8.2.4",
     "typescript": "5.5.4"
-  }
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }
