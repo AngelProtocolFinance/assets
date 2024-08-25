@@ -15,8 +15,7 @@
     "noImplicitOverride": true,
 
     /* If NOT transpiling with TypeScript: */
-    "module": "es2022",
-    "moduleResolution": "node",
+    "module": "preserve",
     "noEmit": true,
 
     /* If your code doesn't run in the DOM: */

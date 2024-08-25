@@ -85,8 +85,6 @@ export interface RawTokensRes {
   currencies: Token[];
 }
 
-
-
 export interface ChainInfo {
   /**@example "Polygon" */
   name: string;
@@ -110,4 +108,12 @@ export interface Token {
   color: string;
   /** coingecko id */
   cg_id: string;
+}
+
+export interface TokensMap {
+  [token_symbol: string]: Token;
+}
+
+export interface ChainMap {
+  [network_id: string]: ChainInfo;
 }

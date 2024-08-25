@@ -1,8 +1,8 @@
 import fs from "fs";
 import crypto from "crypto";
 import type { Ensure, RawToken, Token } from "../types";
-import chains from "../chains.json";
-import symbols from "../symbols.json";
+import chains from "../generated/chains.json";
+import symbols from "../generated/symbols.json";
 
 type Filtered = Ensure<RawToken, "network">;
 

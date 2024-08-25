@@ -6,10 +6,30 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "generate-tokens": "rm ./tokens/* && bun run ./scripts/build.ts"
+    "generate-tokens": "bun run ./src/scripts/generate-tokens.ts",
+    "build": "tsup"
+  },
+  "exports": {
+    "./tokens": {
+      "default": "./dist/tokens/list.js",
+      "types": "./dist/tokens/list.d.ts"
+    },
+    "./tokens/test": {
+      "default": "./dist/tokens/list-test.js",
+      "types": "./dist/tokens/list-test.d.ts"
+    },
+    "./tokens/map": {
+      "default": "./dist/tokens/map.js",
+      "types": "./dist/tokens/map.d.ts"
+    },
+    "./chains": {
+      "default": "./dist/chains.js",
+      "types": "./dist/chains.d.ts"
+    }
   },
   "devDependencies": {
     "@types/bun": "1.1.6",
+    "tsup": "8.2.4",
     "typescript": "5.5.4"
   }
 }
