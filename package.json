@@ -1,13 +1,14 @@
 {
   "name": "@better-giving/assets",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
     "generate-tokens": "bun run ./src/scripts/generate-tokens.ts",
-    "build": "bun generate-tokens && tsup"
+    "build": "bun generate-tokens && tsup",
+    "to-npm": "bun run build && npm publish"
   },
   "exports": {
     "./tokens": "./dist/tokens/list.mjs",
